@@ -1,4 +1,4 @@
-"""Part 3: your own tests for parse_walk. The README says what to write here.
+"""Part 10: your own tests for parse_walk. The README says what to write here.
 
 We grade this file by running it against a correct walks.py, where every test must pass,
 and against versions of walks.py with a bug planted in parse_walk, where your tests should fail.
