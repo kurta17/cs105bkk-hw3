@@ -137,7 +137,7 @@ Work through the parts in this order. Run `python -m pytest` after each one.
    '{"steps_a_day": 8000}'
    ```
 
-8. **`write_report(path, walks)`** builds the report as a dict with three keys: `"total_steps"` (all the steps of the week), `"best_day"` and `"days"` (the dict from `steps_per_day`). It saves the report to `path` as JSON with `json.dump(report, file, indent=2)`, inside `with saved_safely(path) as file:`, and returns the dict. With no walks, `best_day` raises `ValueError`, and the old report must stay as it was.
+8. **`write_report(path, walks)`** builds the report as a dict with three keys: `"total_steps"` (all the steps of the week), `"best_day"` and `"days"` (the dict from `steps_per_day`). It saves the report to `path` as JSON with `json.dump(report, file, indent=2)`, inside `with saved_safely(path) as file:`, and returns the dict. As in part 5, `walks` can be a generator, and it is one when `python report.py` runs, so go through it only once. With no walks, `best_day` raises `ValueError`, and the old report must stay as it was.
 
    ```python
    >>> report = write_report(Path("report.json"), walks)
